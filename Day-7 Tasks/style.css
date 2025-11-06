@@ -1,0 +1,12 @@
+.EXTERNAL_H2{
+    background-color: teal;
+    color: aliceblue;
+    text-align: center;
+    border: 3px solid burlywood;
+}
+.EXTERNAL_P{
+    background-color: #001f3f;
+    color: aliceblue;
+    text-align: center;
+    border: 3px solid burlywood;
+}
