@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.profile {
+  display: flex;
+  gap: 10px;
+}
+.profile-sidebar {
+  flex: 1;
+  background: lightpink;
+  padding: 20px;
+}
+.profile-main {
+  flex: 3;
+  display: grid;
+  grid-template-rows: 150px 1fr;
+  gap: 10px;
+}
+.profile-info {
+  background: lightyellow;
+  padding: 20px;
+}
+.profile-posts {
+  background: lightgray;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+    <h3>Profile Page</h3>
+<div class="profile">
+  <div class="profile-sidebar">Profile Picture</div>
+  <div class="profile-main">
+    <div class="profile-info">Info</div>
+    <div class="profile-posts">Posts</div>
+  </div>
+</div>
+</body>
+</html>

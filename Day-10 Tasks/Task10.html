@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: 80px 1fr 60px;
+      height: 100vh;
+    }
+
+    header { grid-area: header; background: #0077b6; color: white; text-align: center; padding: 20px; }
+    aside  { grid-area: sidebar; background: #90e0ef; padding: 20px; }
+    main   { grid-area: main; background: #caf0f8; padding: 20px; }
+    footer { grid-area: footer; background: #0077b6; color: white; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
+  <div class="portfolio">
+    <header>My Portfolio</header>
+    <aside>Menu / About Me</aside>
+    <main>
+      <h2>Projects</h2>
+      <p>Showcase of my best work</p>
+    </main>
+    <footer>© 2025 My Portfolio</footer>
+  </div>
+</body>
+</html>

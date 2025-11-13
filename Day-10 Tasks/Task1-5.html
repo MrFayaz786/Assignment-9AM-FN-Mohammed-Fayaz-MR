@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.block {
+  display: block;
+  background: lightcoral;
+  padding: 10px;
+  margin: 5px;
+}
+.inline {
+  display: inline;
+  background: lightgreen;
+  padding: 10px;
+}
+.inline-block {
+  display: inline-block;
+  background: lightblue;
+  padding: 10px;
+  margin: 5px;
+}
+.left-img {
+  float: left;
+  margin-right: 10px;
+}
+.right-img {
+  float: right;
+  margin-left: 10px;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img{
+    width: 250px;
+}
+
+.flex-even {
+  display: flex;
+  justify-content: space-evenly;
+  background: #eee;
+  padding: 10px;
+}
+.flex-even div {
+  background: lightpink;
+  padding: 20px;
+  border: 1px solid #000;
+}
+.flex-bottom {
+  display: flex;
+  align-items: flex-start;
+  height: 150px;
+  background: #f0f0f0;
+}
+.flex-bottom div {
+  background: lightseagreen;
+  padding: 20px;
+  margin: 5px;
+}
+.bottom {
+  align-self: flex-end;
+}
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "header header"
+    "left right"
+    "footer footer";
+  gap: 10px;
+}
+.grid-layout > * {
+  background: lightyellow;
+  border: 1px solid #000;
+  padding: 15px;
+}
+header { grid-area: header; }
+.left { grid-area: left; }
+.right { grid-area: right; }
+footer { grid-area: footer; }
+
+</style>
+</head>
+<body>
+
+    <h3> Display Types</h3>
+<div class="block">Block Element</div>
+<span class="inline">Inline Element</span>
+<div class="inline-block">Inline-block Element</div>
+
+<h3>Float Two Images</h3>
+<div class="clearfix">
+  <img src="/Day-2 Tasks/free-nature-images.jpg" class="left-img" alt="">
+  <img src="/Day-7 Tasks/images.jpg" class="right-img" alt="">
+  <p>This paragraph sits between two floated images. Clearfix ensures the layout doesn’t break.</p>
+</div>
+
+<h3>Flexbox with Even Spacing</h3>
+<div class="flex-even">
+  <div>Box 1</div>
+  <div>Box 2</div>
+  <div>Box 3</div>
+</div>
+
+<h3>Align One Item Bottom</h3>
+<div class="flex-bottom">
+  <div>Box 1</div>
+  <div class="bottom">Box 2 (Bottom)</div>
+  <div>Box 3</div>
+</div>
+
+<h3>2-Column Grid Layout</h3>
+<div class="grid-layout">
+  <header>Header</header>
+  <div class="left">Left Column</div>
+  <div class="right">Right Column</div>
+  <footer>Footer</footer>
+</div>
+</body>
+</html>

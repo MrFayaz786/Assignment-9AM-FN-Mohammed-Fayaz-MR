@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+  padding: 10px;
+  background: lightcoral;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.float-img {
+  float: left;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  background: lightblue;
+  padding: 30px;
+  border: 1px solid black;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.item {
+  background: lightgreen;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+}
+
+.grid-container div {
+  background: lightpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+    </style>
+</head>
+<body>
+<div class="box block">Block</div>
+<span class="box inline">Inline</span>
+<div class="box inline-block">Inline-block</div> 
+
+<div class="clearfix">
+  <img src="/Day-2 Tasks/free-nature-images.jpg" class="float-img" alt="image">
+  <p>This text flows beside the floated image.</p>
+</div>
+
+<div class="flex-container">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
+
+<div class="center-container">
+  <div class="item">Centered</div>
+</div>
+
+<div class="grid-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</div>
+</body>
+</html>

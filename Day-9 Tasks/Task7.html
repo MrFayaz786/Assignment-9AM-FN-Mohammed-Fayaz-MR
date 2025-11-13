@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.product-grid div {
+  background: lightgreen;
+  padding: 20px;
+  border: 1px solid #000;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <h3>Product Grid</h3>
+<div class="product-grid">
+  <div>Product 1</div>
+  <div>Product 2</div>
+  <div>Product 3</div>
+  <div>Product 4</div>
+</div>
+</body>
+</html>

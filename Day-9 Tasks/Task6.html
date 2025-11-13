@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.flex3 {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.flex3 div {
+  background: lightcoral;
+  flex: 1 1 300px; /* 3 columns but wraps on small screens */
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <h3> Responsive 3-Column Flexbox</h3>
+<div class="flex3">
+  <div>Column 1</div>
+  <div>Column 2</div>
+  <div>Column 3</div>
+</div>
+</body>
+</html>

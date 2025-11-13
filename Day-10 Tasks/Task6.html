@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+      background-color: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .container {
+      display: flex; /* Flexbox replaces float layout */
+    }
+
+    nav {
+      background-color: #90e0ef;
+      flex: 1;
+      padding: 20px;
+    }
+
+    main {
+      background-color: #caf0f8;
+      flex: 3;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+
+  <div class="container">
+    <nav>Sidebar</nav>
+    <main>Main Content</main>
+  </div>
+
+  <footer>Footer</footer>
+</body>
+</html>
