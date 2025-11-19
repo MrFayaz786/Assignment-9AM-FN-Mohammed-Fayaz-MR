@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 150px); /* 2 rows */
+  gap: 10px;
+}
+.grid-3x2 div {
+  background: lightblue;
+  padding: 20px;
+}
+
+.four-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  background-color: cadetblue;
+}
+.four-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.four-cols div {
+  background: lightgreen;
+  padding: 20px;
+}
+
+.gap-example {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.gap-example div {
+  background: orange;
+  padding: 20px;
+}
+.areas {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  gap: 10px;
+}
+
+header { grid-area: header; background: tomato; padding: 20px; }
+main   { grid-area: main; background: lightgray; padding: 20px; }
+footer { grid-area: footer; background: skyblue; padding: 20px; }
+    
+    .repeat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.repeat-grid div {
+  background: violet;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+    <div class="grid-3x2">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+
+<div class="four-cols">
+  <div>A</div><div>B</div><div>C</div><div>D</div>
+</div>
+
+<div class="gap-example">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+
+<div class="areas">
+  <header>Header</header>
+  <main>Main</main>
+  <footer>Footer</footer>
+</div>
+
+<div class="repeat-grid">
+  <div>1</div><div>2</div><div>3</div><div>4</div>
+</div>
+
+</body>
+</html>

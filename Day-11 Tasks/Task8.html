@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 70px auto 60px;
+  grid-template-areas:
+    "header header header"
+    "menu main right"
+    "footer footer footer";
+  gap: 10px;
+}
+
+header { grid-area: header; background:#ffa; padding: 20px; }
+nav { grid-area: menu; background:#faa; padding: 20px; }
+section { grid-area: main; background:#afa; padding: 20px; }
+aside { grid-area: right; background:#aaf; padding: 20px; }
+footer { grid-area: footer; background:#ddd; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+  <header>Header</header>
+  <nav>Menu</nav>
+  <section>Main</section>
+  <aside>Right</aside>
+  <footer>Footer</footer>
+</div>
+</body>
+</html>
