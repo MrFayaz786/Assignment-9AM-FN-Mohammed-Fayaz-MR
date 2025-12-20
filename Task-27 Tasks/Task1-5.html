@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+  #hoverText:hover {
+    color: red;
+  }
+</style>
+
+</head>
+<body>
+
+    <!-- Task 1 -->
+
+    <button onclick="alert('Button was clicked!')">Click Me</button>
+
+    <!-- Task 2 -->
+
+    <p id="hoverText">Hover over me!</p>
+
+    <!-- Task 3 -->
+
+    <input type="text" id="keyboardInput" placeholder="Type something...">
+
+<script>
+  document.getElementById("keyboardInput").addEventListener("keydown", function(event) {
+    console.log("Key pressed:", event.key);
+  });
+</script>
+
+   <!-- Task 4 -->
+
+   <form id="myForm">
+  <input type="text" placeholder="Enter text">
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stops reload
+    alert("Form submitted without reload!");
+  });
+</script>
+
+<!-- Task 5 -->
+
+<p onclick="showText(this)">Click me!</p>
+<p onclick="showText(this)">Or click me!</p>
+
+<script>
+  function showText(element) {
+    alert("You clicked: " + element.textContent);
+  }
+</script>
+
+
+</body>
+</html>

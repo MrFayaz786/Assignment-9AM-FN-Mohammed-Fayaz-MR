@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+  .menu { display: none; background: lightgray; padding: 10px; }
+  .menu-container:hover .menu { display: block; }
+</style>
+
+
+</head>
+<body>
+
+    <!-- Task 6 -->
+
+     <button id="counterBtn">Count: 0</button>
+
+<script>
+  let count = 0;
+  document.getElementById("counterBtn").addEventListener("click", () => {
+    count++;
+    document.getElementById("counterBtn").textContent = "Count: " + count;
+  });
+</script>
+
+<!-- Task 7 -->
+
+<div class="menu-container">
+  <button>Hover Me</button>
+  <div class="menu">
+    <p>Option 1</p>
+    <p>Option 2</p>
+    <p>Option 3</p>
+  </div>
+</div>
+
+<!-- Task 8 -->
+
+<form id="loginForm">
+  <input type="text" id="username" placeholder="Username"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button type="submit">Login</button>
+</form>
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if (user === "" || pass === "") {
+      alert("Both fields are required!");
+    } else {
+      alert("Login successful!");
+    }
+  });
+</script>
+
+<!-- Task 9 -->
+
+<script>
+  document.addEventListener("keydown", function(event) {
+    if (event.ctrlKey && event.key === "s") {
+      event.preventDefault();
+      alert("Ctrl + S shortcut triggered!");
+    }
+  });
+</script>
+
+<!-- Task 10 -->
+
+<p id="tracker">Clicks: 0</p>
+
+<script>
+  let clicks = 0;
+  document.addEventListener("click", function() {
+    clicks++;
+    document.getElementById("tracker").textContent = "Clicks: " + clicks;
+  });
+</script>
+
+</body>
+</html>
