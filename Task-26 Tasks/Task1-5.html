@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Task 1 -->
+
+    <h1 id="myHeading">Original Heading</h1>
+<button onclick="changeText()">Change Heading</button>
+
+<script>
+  function changeText() {
+    document.getElementById("myHeading").textContent = "Heading Changed!";
+  }
+</script>
+
+<!-- Task 2 -->
+
+<p id="myPara">This is a paragraph.</p>
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+  function changeColor() {
+    document.querySelector("#myPara").style.color = "blue";
+  }
+</script>
+
+<!-- Task 3 -->
+
+<ul id="myList"></ul>
+<button onclick="addItems()">Add Items</button>
+
+<script>
+  function addItems() {
+    let list = document.getElementById("myList");
+    let items = ["Item 1", "Item 2", "Item 3"];
+    items.forEach(text => {
+      let li = document.createElement("li");
+      li.textContent = text;
+      list.appendChild(li);
+    });
+  }
+</script>
+
+<!-- Task 4 -->
+
+<ul id="myList">
+  <li>First Item</li>
+  <li>Second Item</li>
+</ul>
+<button onclick="removeFirst()">Remove First</button>
+
+<script>
+  function removeFirst() {
+    let list = document.getElementById("myList");
+    if (list.firstChild) {
+      list.removeChild(list.firstChild);
+    }
+  }
+</script>
+
+<!-- Task 5 -->
+
+<button id="bgBtn">Change Background</button>
+
+<script>
+  document.getElementById("bgBtn").addEventListener("click", () => {
+    document.body.style.backgroundColor = "lightgreen";
+  });
+</script>
+
+</body>
+</html>

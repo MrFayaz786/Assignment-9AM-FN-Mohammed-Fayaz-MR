@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Task 6-->
+    <button id="darkModeBtn">Toggle Dark Mode</button>
+
+<script>
+  document.getElementById("darkModeBtn").addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+</script>
+
+<style>
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+</style>
+
+<!-- Task 7 -->
+
+<input type="text" id="myInput" placeholder="Type something...">
+<p id="output"></p>
+
+<script>
+  document.getElementById("myInput").addEventListener("input", function() {
+    document.getElementById("output").textContent = this.value;
+  });
+</script>
+
+<!-- Task 8 -->
+
+<input type="text" id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add Task</button>
+<ul id="taskList"></ul>
+
+<script>
+  function addTask() {
+    let input = document.getElementById("taskInput");
+    let task = input.value.trim();
+    if (task) {
+      let li = document.createElement("li");
+      li.textContent = task;
+
+      // Add remove button
+      let btn = document.createElement("button");
+      btn.textContent = "Remove";
+      btn.onclick = () => li.remove();
+
+      li.appendChild(btn);
+      document.getElementById("taskList").appendChild(li);
+      input.value = "";
+    }
+  }
+</script>
+
+<!-- Task 9 -->
+
+<button class="colorBtn" data-color="red">Red</button>
+<button class="colorBtn" data-color="blue">Blue</button>
+<button class="colorBtn" data-color="yellow">Yellow</button>
+
+<script>
+  document.querySelectorAll(".colorBtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.body.style.backgroundColor = btn.dataset.color;
+    });
+  });
+</script>
+
+<!-- Task 10 -->
+
+<div id="content"></div>
+<button onclick="insertHTML()">Insert HTML</button>
+
+<script>
+  function insertHTML() {
+    document.getElementById("content").innerHTML = 
+      "<b>Bold Text</b> and <i>Italic Text</i>";
+  }
+</script>
+
+</body>
+</html>
